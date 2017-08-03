@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Welcome to the Book Database</title>
+
+</head>
+<body>
+<form action="#" th:action="@{/addBook}" th:object="${newBook}" method="post">
+    <p>Book Title: <input type="text" th:field="*{title}"/>
+         <span th:if="${#fields.hasErrors('title')}" th:errors="*{title}">Title Error</span></p>
+    <p>Book Author: <input type="text" th:field="*{author}"/>
+        <span th:if="${#fields.hasErrors('author')}" th:errors="*{author}">Author Error</span></p>
+
+    <p>Book Description: <input type="text" th:field="*{description}"/>
+        <span th:if="${#fields.hasErrors('description')}" th:errors="*{description}">Description Error</span></p>
+    <p>Book SKU: <input type="text" th:field="*{sku}"/>
+        <span th:if="${#fields.hasErrors('sku')}" th:errors="*{sku}">SKU Error</span></p>
+    <p>Book Price: <input type="text" th:field="*{price}"/>
+        <span th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</span></p>
+    <p><input type="submit" value="Enter" /> <input type="reset" value="Reset" /> </p>
+
+
+</form>
+
+</body>
+</html>
