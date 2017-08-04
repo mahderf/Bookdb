@@ -2,14 +2,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Bookstore</title>
+    <title>Bookstore Result</title>
 </head>
 <body>
-<p> th:text="'Book Title: '+ ${newBook.title}" </p>
-<p> th:text="'Book Author: '+ ${newBook.author}" </p>
-<p> th:text="'Book Description: '+ ${newBook.description}" </p>
-<p> th:text="'Book SKU: '+ ${newBook.sku}" </p>
-<p> th:text="'Book Price: '+ ${newBook.price}" </p>
+<p th:text="'Book Id: '+ ${newBook.id}" />
+<p th:text="'Book Title: '+ ${newBook.title}" />
+<p th:text="'Book Author: '+ ${newBook.author}" />
+<p th:text="'Book Description: '+ ${newBook.description}" />
+<p th:text="'Book SKU: '+ ${newBook.sku}" />
+<p th:text="'Book Price: '+ ${newBook.price}" />
+<a href="/addBook">Add another book</a>
 
 </body>
 </html>
