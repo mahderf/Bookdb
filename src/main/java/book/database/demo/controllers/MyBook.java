@@ -12,10 +12,10 @@ public class MyBook {
     @Size(min = 4, max = 50)
     private String title;
     @NotNull
-    @Size(min = 4, max = 50)
+    @Size(min = 4, max = 70)
     private String author;
     @NotNull
-    @Size(min = 4, max = 50)
+    @Size(min = 4, max = 100)
     private String description;
     @NotNull
     @Size(min = 4, max = 50)

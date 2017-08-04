@@ -48,9 +48,11 @@ public class MainController {
 
     }
   @GetMapping("/showallbooks")
-    public @ResponseBody Iterable<MyBook>getAllUsers()
+    public String showallbooks(Model model)
   {
-      return bookRepository.findAll();
+      Iterable<MyBook> booklist=bookRepository.findAll();
+      model.addAttribute("dbbooks", booklist);
+      return "showbook";
   }
 
 }

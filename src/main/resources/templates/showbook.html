@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Books in database</title>
 </head>
 
@@ -14,9 +14,9 @@
         <th>Price</th>
     </tr>
     <tr th:each="book:${dbbooks}">
-        <td th:text="${book.title}"></td>
-        <td th:text="${book.author}"></td>
-        <td th:text="${book.description}"></td>
+        <td th:text="${book.title}">Book Title</td>
+        <td th:text="${book.author}">Author</td>
+        <td th:text="${book.description}">Desription</td>
         <td th:text="${book.sku}"></td>
         <td th:text="${book.price}"></td>
     </tr>
