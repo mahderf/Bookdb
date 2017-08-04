@@ -7,7 +7,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-public class Book {
+public class MyBook {
     @NotNull
     @Size(min = 4, max = 50)
     private String title;

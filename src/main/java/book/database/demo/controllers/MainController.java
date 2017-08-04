@@ -8,9 +8,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
-import javax.jws.WebParam;
 import javax.validation.Valid;
 import java.awt.print.Book;
 
@@ -32,19 +30,19 @@ public class MainController {
     @GetMapping("/addBook")
     public String addBooks(Model model)
     {
-        model.addAttribute("newBook", new Book());
+        model.addAttribute("newBook", new MyBook());
         return "addBook";
     }
 
     @PostMapping("/addBook")
-    public String postBook(@Valid @ModelAttribute("newBook") Book otherBook, BindingResult bindingResult)
+    public String postBook(@Valid @ModelAttribute("newBook") MyBook otherBook, BindingResult bindingResult)
     {
         if(bindingResult.hasErrors())
         {
             return "addBook";
         }
 
-       // bookRepository.save(otherBook);
+       bookRepository.save(otherBook);
         return "result";
 
     }
